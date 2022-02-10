@@ -12,9 +12,9 @@ const theme = {
     p2: 'font-size: 1rem;',
   },
   label: {
-    small: 'font-weight: 500; font-size: 0.75rem;',
-    medium: 'font-weight: 500; font-size: 0.875rem;',
-    large: 'font-weight: 500; font-size: 1rem;',
+    small: '0.75rem',
+    medium: '0.875rem',
+    large: '1rem',
   },
   display: {
     display1: 'font-weight: 700; font-size: 4rem;',
@@ -113,7 +113,7 @@ const theme = {
     grape40: 'hsla(300, 100%, 95%) /*#FFE5FF*/',
   },
   elevation: {
-    inset01: 'box-shadow: 0px 0.5px 4px 0px hsla(240, 26%, 9%, 1) inset;',
+    inset01: 'box-shadow: 0px 0.5px 4px 0px hsla(237, 18%, 23%, 0.32) inset;',
     shadow10:
       'box-shadow: 0px 1px 2px 0px hsla(0, 0%, 0%, 0.32); box-shadow: 0px 0px 1px 0px hsla(237, 21%, 20%, 0.08);',
     shadow20:
