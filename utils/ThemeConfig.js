@@ -12,9 +12,9 @@ const theme = {
     p2: 'font-size: 1rem;',
   },
   label: {
-    labelSmall: 'font-weight: 500; font-size: 0.75rem;',
-    labelMedium: 'font-weight: 500; font-size: 0.875rem;',
-    labelLarge: 'font-weight: 500; font-size: 1rem;',
+    small: 'font-weight: 500; font-size: 0.75rem;',
+    medium: 'font-weight: 500; font-size: 0.875rem;',
+    large: 'font-weight: 500; font-size: 1rem;',
   },
   display: {
     display1: 'font-weight: 700; font-size: 4rem;',
@@ -127,8 +127,6 @@ const theme = {
     shadow60:
       'box-shadow: 0px 20px 32px 0px hsla(0, 0%, 0%, 0.32); box-shadow: 0px 2px 8px 0px hsla(0, 0%, 0%, 0.08);',
     focus: 'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 40%);',
-    focusInset:
-      'box-shadow: 0px 0px 0px 2px hsla(240, 19%, 16%, 1); box-shadow: 0px 0.5px 4px 1px hsla(237, 17%, 23%, 0.32) inset;',
     hover: 'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 61%, 0.3);',
   },
 };
