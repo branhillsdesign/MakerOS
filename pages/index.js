@@ -1,41 +1,55 @@
 import { Button } from '../components/Button';
-import { Box } from '../components/layout/Box';
+import { FlexBox } from '../components/layout/FlexBox';
 import { Spacer } from '../components/layout/Spacer';
+import { TextBox, InputLabel } from '../components/Input';
 
 export default function Home() {
   return (
     <>
       <Spacer height='5rem' />
-      <Box
-        flexDirection='column'
-        gap='1rem'
-        padding='2rem 0rem'
-        alignItems='center'
-      >
-        <Box flexDirection='row' gap='10rem' alignItems='center'>
+      <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
+        <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>
           <Button>Button</Button>
           <Button size='lg'>Button</Button>
-        </Box>
-        <Box flexDirection='row' gap='10rem' alignItems='center'>
-          <Button size='sm' variant='secondary'>
+        </FlexBox>
+        <FlexBox flexDirection='row' gap='10rem'>
+          <Button size='sm' variant='outline'>
             Button
           </Button>
-          <Button variant='secondary'>Button</Button>
-          <Button size='lg' variant='secondary'>
+          <Button variant='outline'>Button</Button>
+          <Button size='lg' variant='outline'>
             Button
           </Button>
-        </Box>
-        <Box flexDirection='row' gap='10rem' alignItems='center'>
-          <Button size='sm' variant='tertiary'>
+        </FlexBox>
+        <FlexBox flexDirection='row' gap='10rem'>
+          <Button size='sm' variant='pill'>
             Button
           </Button>
-          <Button variant='tertiary'>Button</Button>
-          <Button size='lg' variant='tertiary'>
+          <Button variant='pill'>Button</Button>
+          <Button size='lg' variant='pill'>
             Button
           </Button>
-        </Box>
-      </Box>
+        </FlexBox>
+        <FlexBox flexDirection='row' gap='10rem'>
+          <Button size='sm' variant='disabled'>
+            Button
+          </Button>
+          <Button variant='disabled'>Button</Button>
+          <Button size='lg' variant='disabled'>
+            Button
+          </Button>
+        </FlexBox>
+        <FlexBox gap='.2rem' flexDirection='column' alignItems='flex-start'>
+          <InputLabel>Input Label</InputLabel>
+          <TextBox placeholder='Placeholder text' />
+          <Spacer height='1rem' />
+          <InputLabel>Input Label</InputLabel>
+          <TextBox placeholder='Placeholder text' />
+          <Spacer height='2rem' />
+          <Button>Button</Button>
+        </FlexBox>
+      </FlexBox>
     </>
   );
 }

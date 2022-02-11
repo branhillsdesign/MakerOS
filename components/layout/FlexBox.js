@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
+export const FlexBox = styled.div`
   display: ${(props) => props.display || 'flex'};
-  flex-direction: ${(props) => props.flexDirection || 'row'};
-  justify-content: ${(props) => props.justifyContent || 'flex-start'};
-  align-items: ${(props) => props.alignItems || 'flex-start'};
+  flex-direction: ${(props) => props.flexDirection || 'inherit'};
+  justify-content: ${(props) => props.justifyContent || 'inherit'};
+  align-items: ${(props) => props.alignItems || 'inherit'};
   gap: ${(props) => props.gap || '1rem'};
   max-width: ${(props) => props.maxWidth || '100%'};
   

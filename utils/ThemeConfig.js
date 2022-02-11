@@ -8,13 +8,13 @@ const theme = {
     h6: 'font-weight: 700; font-size: 1rem;',
   },
   body: {
-    p1: 'font-size: 1.125rem;',
-    p2: 'font-size: 1rem;',
+    p1: 'font-weight: 500; font-size: 1.125rem;',
+    p2: 'font-weight: 500; font-size: 1rem;',
   },
   label: {
-    small: '0.75rem',
-    medium: '0.875rem',
-    large: '1rem',
+    small: '0.875rem',
+    medium: '1rem',
+    large: '1.125rem',
   },
   display: {
     display1: 'font-weight: 700; font-size: 4rem;',
@@ -127,7 +127,8 @@ const theme = {
     shadow60:
       'box-shadow: 0px 20px 32px 0px hsla(0, 0%, 0%, 0.32); box-shadow: 0px 2px 8px 0px hsla(0, 0%, 0%, 0.08);',
     focus: 'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 40%);',
-    hover: 'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 61%, 0.3);',
+    hover:
+      'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 61%, 0.3), 0px 0.5px 4px 0px hsla(237, 18%, 23%, 0.32) inset;',
   },
 };
 
