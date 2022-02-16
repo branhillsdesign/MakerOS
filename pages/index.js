@@ -32,6 +32,15 @@ export default function Home() {
           </Button>
         </FlexBox>
         <FlexBox flexDirection='row' gap='10rem'>
+          <Button size='sm' variant='link'>
+            Button
+          </Button>
+          <Button variant='link'>Button</Button>
+          <Button size='lg' variant='link'>
+            Button
+          </Button>
+        </FlexBox>
+        <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm' variant='disabled'>
             Button
           </Button>
@@ -40,7 +49,7 @@ export default function Home() {
             Button
           </Button>
         </FlexBox>
-        <FlexBox gap='.2rem' flexDirection='column' alignItems='flex-start'>
+        <FlexBox gap='.5rem' flexDirection='column' alignItems='flex-start'>
           <InputLabel>Input Label</InputLabel>
           <TextBox placeholder='Placeholder text' />
           <Spacer height='1rem' />

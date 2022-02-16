@@ -39,6 +39,7 @@ export const TextBox = styled.input`
   padding: 0.5rem 1rem;
   color: ${theme.colors.text.vivid};
   background: ${theme.colors.background.surface100};
+  outline: 2px solid ${theme.colors.text.disabled};
 
   &:hover {
     ${theme.elevation.hover};

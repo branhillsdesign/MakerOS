@@ -7,12 +7,12 @@ export const FlexBox = styled.div`
   align-items: ${(props) => props.alignItems || 'inherit'};
   gap: ${(props) => props.gap || '1rem'};
   max-width: ${(props) => props.maxWidth || '100%'};
-  
+
   &: > * {
     margin-block: 0;
   }
 
-  &:> * + * {
+  &: > * + * {
     margin-block-start: ${(props) => props.gap || 'null'};
   }
 `;
