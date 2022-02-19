@@ -7,6 +7,7 @@ export const FlexBox = styled.div`
   align-items: ${(props) => props.alignItems || 'inherit'};
   gap: ${(props) => props.gap || '1rem'};
   max-width: ${(props) => props.maxWidth || '100%'};
+  background-color: ${(props) => props.backgroundColor || 'inherit'};
 
   &: > * {
     margin-block: 0;

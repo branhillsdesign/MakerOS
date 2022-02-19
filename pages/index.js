@@ -2,11 +2,12 @@ import { Button } from '../components/Button';
 import { FlexBox } from '../components/layout/FlexBox';
 import { Spacer } from '../components/layout/Spacer';
 import { TextBox, InputLabel } from '../components/Input';
+import { NavDropdownMenu } from '../components/NavDropdown';
 
 export default function Home() {
   return (
     <>
-      <Spacer height='5rem' />
+      <NavDropdownMenu />
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
         <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>
