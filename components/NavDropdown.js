@@ -9,6 +9,9 @@ const NavList = ['Default', 'Default', 'Default', 'Default'];
 const Dropdown = styled.div`
   position: relative;
   display: inline-block;
+  Image:hover & {
+    transform: rotate(90deg);
+  }
 `;
 
 const NavButton = styled.button`
@@ -41,7 +44,7 @@ const DropdownContent = styled.div`
   background-color: ${theme.colors.background.surface100};
   z-index: 1;
   border-radius: 0.5rem;
-  left: -50%;
+  left: -4rem;
   ${Dropdown}:hover & {
     display: block;
   }
@@ -63,6 +66,13 @@ const Spacer = styled.span`
   width: ${(props) => props.w || '.5rem'};
 `;
 
+const IconFrame = styled.div`
+  ${Dropdown}:hover & {
+    transform: rotate(90deg);
+    transition: 0.3s ease;
+  }
+`;
+
 const NavButton01 = () => {
   return (
     // I need to work on generating buttons dynamically from the NavList array
@@ -71,7 +81,9 @@ const NavButton01 = () => {
         <NavButton>
           {NavList[0]}
           <Spacer />
-          <Image src={ArrowRightSVG} alt='' />
+          <IconFrame>
+            <Image src={ArrowRightSVG} alt='' />
+          </IconFrame>
         </NavButton>
         <DropdownContent>
           <DropdownItem>
