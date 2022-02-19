@@ -2,13 +2,13 @@ import { Button } from '../components/Button';
 import { FlexBox } from '../components/layout/FlexBox';
 import { Spacer } from '../components/layout/Spacer';
 import { TextBox, InputLabel } from '../components/Input';
-import { NavDropdownMenu } from '../components/NavDropdown';
+import { NavButton } from '../components/NavButton';
 
 export default function Home() {
   return (
     <>
-      <NavDropdownMenu />
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
+        <NavButton width='8rem'>Events</NavButton>
         <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>
           <Button>Button</Button>

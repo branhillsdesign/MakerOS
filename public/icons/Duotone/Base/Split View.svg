@@ -1,0 +1,18 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_402_19247" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="3" width="18" height="18">
+<path d="M15 3H17V5H15V3Z" fill="white"/>
+<path d="M19 3H21V5H19V3Z" fill="white"/>
+<path d="M19 7H21V9H19V7Z" fill="white"/>
+<path d="M19 11H21V13H19V11Z" fill="white"/>
+<path d="M19 15H21V17H19V15Z" fill="white"/>
+<path d="M19 19H21V21H19V19Z" fill="white"/>
+<path d="M15 19H17V21H15V19Z" fill="white"/>
+<path d="M3 3H9V21H3V3Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_402_19247)">
+<path d="M13 20V4H19C19.5523 4 20 4.44772 20 5V19C20 19.5523 19.5523 20 19 20H13ZM11 4V20H5C4.44772 20 4 19.5523 4 19V5C4 4.44772 4.44772 4 5 4H11Z" stroke="#555770" stroke-width="2"/>
+<path d="M20 5V19C20 19.5523 19.5523 20 19 20H14C13.4477 20 13 19.5523 13 19V5C13 4.44772 13.4477 4 14 4H19C19.5523 4 20 4.44772 20 5Z" stroke="#3E7BFA" stroke-width="2"/>
+<path d="M4 19V5C4 4.44772 4.44772 4 5 4H10C10.5523 4 11 4.44772 11 5V19C11 19.5523 10.5523 20 10 20H5C4.44771 20 4 19.5523 4 19Z" stroke="#555770" stroke-width="2"/>
+</g>
+<path d="M12 1V23" stroke="#555770" stroke-width="2"/>
+</svg>
