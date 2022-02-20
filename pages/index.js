@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <>
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
-        <NavButton width='8rem'>Events</NavButton>
+        <NavButton width='8rem' />
         <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>
           <Button>Button</Button>

@@ -8,6 +8,9 @@ export const FlexBox = styled.div`
   gap: ${(props) => props.gap || '1rem'};
   max-width: ${(props) => props.maxWidth || '100%'};
   background-color: ${(props) => props.backgroundColor || 'inherit'};
+  flex-grow: ${(props) => props.flexGrow || '1'};
+  flex-shrink: ${(props) => props.flexShrink || '1'};
+  flex-basis: ${(props) => props.flexBasis || 'auto'};
 
   &: > * {
     margin-block: 0;
