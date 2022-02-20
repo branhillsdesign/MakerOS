@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../utils/ThemeConfig';
+import Image from 'next/image';
 import ArrowRight from '../public/icons/2px/Arrows/Arrow Right.svg';
 import { FlexBox } from './layout/FlexBox';
 
@@ -40,7 +41,7 @@ export const NavButton = () => {
       <NavButton01>
         <FlexBox justifyContent='center' alignItems='center' gap='0.5rem'>
           Events
-          <AnimateArrow />
+          <Image src={ArrowRight} alt=''/>
         </FlexBox>
       </NavButton01>
     </>
