@@ -103,7 +103,7 @@ const Rotate180 = styled(Image)`
 export const NavButton = (props) => {
   return (
     <>
-      <StyledNavButton>
+      <StyledNavButton variant={props.variant}>
         <FlexBox justifyContent='center' alignItems='center' gap='0.5rem'>
           {props.text || 'NavButton'}
           <Rotate90 src={ArrowRight} alt='' />
