@@ -16,6 +16,9 @@ const ListItem = styled.li`
   &:hover {
     background-color: ${theme.colors.background.bg00};
   }
+  &:focus {
+    outline: 2px solid ${theme.colors.main};
+  }
 `;
 
 export const DropdownLI = (props) => {

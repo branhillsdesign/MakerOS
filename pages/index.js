@@ -7,7 +7,7 @@ import { NavDropDown } from '../components/NavDropdownMenu';
 export default function Home() {
   return (
     <>
-      <FlexBox justifyContent='center'>
+      <FlexBox justifyContent='center' gap='0'>
         <NavDropDown />
       </FlexBox>
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>

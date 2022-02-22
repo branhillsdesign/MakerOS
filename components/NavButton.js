@@ -82,6 +82,10 @@ const StyledNavButton = styled.button`
   text-align: center;
   transition: all 0.3s ease;
   ${(props) => styles.variant[props.variant] || styles.variant['01']};
+  &:focus {
+    outline: 2px solid ${theme.colors.main};
+    border-radius: 0.375rem;
+  }
 `;
 
 export const NavButton = (props) => {

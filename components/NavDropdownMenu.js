@@ -7,22 +7,23 @@ import { NavButton } from './NavButton';
 const NavList = ['Default', 'Default', 'Default', 'Default'];
 
 const Dropdown = styled.div`
+  display: block;
   position: relative;
-  display: inline-block;
 `;
 
 const DropdownContent = styled.div`
   display: none;
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   padding: 2rem;
-  min-width: 16rem;
   background-color: ${theme.colors.background.surface100};
   z-index: 1;
   border-radius: 0.5rem;
-  left: -50%;
-  ${theme.elevation.shadow30};
+  ${theme.elevation.shadow60};
   ${Dropdown}:hover & {
     display: block;
+    transition: all 0.3s ease-in;
   }
 `;
 
@@ -34,6 +35,9 @@ export const NavDropDown = () => {
         <NavButton variant='01' hoverTarget={Dropdown} text='Events' />
         <DropdownContent>
           <FlexBox flexDirection='column' gap='.25rem'>
+            <DropdownLI text='Weddings' />
+            <DropdownLI text='Weddings' />
+            <DropdownLI text='Weddings' />
             <DropdownLI text='Weddings' />
             <DropdownLI text='Weddings' />
             <DropdownLI text='Weddings' />
