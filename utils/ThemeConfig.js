@@ -1,4 +1,5 @@
 const theme = {
+  // Typography
   headings: {
     h1: 'font-weight: 700; font-size: 2.5rem;',
     h2: 'font-weight: 700; font-size: 2rem;',
@@ -29,6 +30,8 @@ const theme = {
     small: 'font-weight: 500; font-size: 0.875rem;',
     tiny: 'font-weight: 600; font-size: 0.75rem; letter-spacing: 0.016em;',
   },
+
+  // Colors
   colors: {
     text: {
       highContrast: 'hsla(240, 18%, 13%) /*#1C1C28*/',
@@ -112,6 +115,8 @@ const theme = {
     grape30: 'hsla(289, 61%, 78%) /*#DDA5E9*/',
     grape40: 'hsla(300, 100%, 95%) /*#FFE5FF*/',
   },
+
+  // Box Shadows
   elevation: {
     inset01: 'box-shadow: 0px 0.5px 4px 0px hsla(237, 18%, 23%, 0.32) inset;',
     shadow10:
@@ -130,6 +135,7 @@ const theme = {
     hover:
       'box-shadow: 0px 0px 0px 4px hsla(221, 95%, 61%, 0.3), 0px 0.5px 4px 0px hsla(237, 18%, 23%, 0.32) inset;',
   },
+  
 };
 
 const darkTheme = {

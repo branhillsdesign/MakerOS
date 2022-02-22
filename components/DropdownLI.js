@@ -1,17 +1,22 @@
 import styled from 'styled-components';
-import Icon from '../public/img/NavButton-arrow-right.svg';
+import ArrowRight from '../public/icons/2px/Arrows/Full Arrow Right.svg';
 import { FlexBox } from './layout/FlexBox';
 import { theme } from '../utils/ThemeConfig';
 
 const ListItem = styled.li`
+  width: 16rem;
   cursor: pointer;
   display: flex;
-  justify-content: space-between;
+  align-items: center;
   padding: 0.5rem;
   border-radius: 0.375rem;
-  gap: 0.5rem;
   &:hover {
-    background-color: ${theme.colors.background.bg00};
+    background-color: ${theme.colors.background.surface100};
+  }
+`;
+
+const AnimateIcon = styled.img`
+  li:hover & {
   }
 `;
 
@@ -20,10 +25,10 @@ export const DropdownLI = () => {
     <>
       <ListItem>
         <FlexBox>
-          ${Icon}
+          <img src={ArrowRight} alt='' />
           Events
         </FlexBox>
-        ${Icon}
+        <AnimateIcon src={ArrowRight} alt='' />
       </ListItem>
     </>
   );

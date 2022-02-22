@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { theme } from '../utils/ThemeConfig';
 import { FlexBox } from './layout/FlexBox';
 import { DropdownLI } from './DropdownLI';
-import { NavButton01 } from './NavButton';
+import { NavButton } from './NavButton';
 
 const NavList = ['Default', 'Default', 'Default', 'Default'];
 
@@ -40,12 +40,12 @@ const IconFrame = styled.div`
   }
 `;
 
-const Nav = () => {
+const NavDropDown = (props) => {
   return (
     // I need to work on generating buttons dynamically from the NavList array
     <>
       <Dropdown>
-        <NavButton01 />
+        <NavButton text='Weddings' variant='01'/>
         <DropdownContent>
           <DropdownLI />
         </DropdownContent>
@@ -62,10 +62,7 @@ export const NavDropdownMenu = () => {
         backgroundColor='${theme.colors.main}'
         justifyContent='space-around'
       >
-        <NavButton01 />
-        <NavButton01 />
-        <NavButton01 />
-        <NavButton01 />
+        <NavButton />
       </FlexBox>
     </>
   );

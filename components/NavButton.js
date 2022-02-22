@@ -9,6 +9,10 @@ import ArrowUp from '../public/icons/2px/Arrows/Arrow Up.svg';
 // Great styles dumbass, you have it working. Now use the fucking schema from Button.js so you can export all of these with props.
 
 const styles = {
+  deg: {
+    90: 'rotate(90deg);',
+    180: 'rotate(180deg);',
+  },
   variant: {
     '01': `padding: 1.5rem 1.5rem 0;
           &:after {
@@ -65,11 +69,7 @@ const styles = {
         &:hover:after {
           width: calc(100% + 3rem);
         }`,
-    '04': `cursor: pointer;
-          border: none;
-          background: inherit;
-          font-size: ${theme.label.large};
-          padding: 1.5rem 1.5rem 0;
+    '04': `padding: 1.5rem 1.5rem 0;
           text-align: center;`,
   },
 };
@@ -84,18 +84,10 @@ const StyledNavButton = styled.button`
   ${(props) => styles.variant[props.variant] || styles.variant['01']};
 `;
 
-const Rotate90 = styled(Image)`
+const Rotate = styled(Image)`
   transition: 0.3s ease;
   button:hover & {
-    transform: rotate(90deg);
-    transition: 0.3s ease;
-  }
-`;
-
-const Rotate180 = styled(Image)`
-  transition: 0.3s ease;
-  button:hover & {
-    transform: rotate(180deg);
+    transform: ${(props) => styles.deg[props.deg] || styles.deg['90']};
     transition: 0.3s ease;
   }
 `;
@@ -104,9 +96,18 @@ export const NavButton = (props) => {
   return (
     <>
       <StyledNavButton variant={props.variant}>
-        <FlexBox justifyContent='center' alignItems='center' gap='0.5rem'>
+        <FlexBox
+          justifyContent='center'
+          alignItems='center'
+          gap='0.5rem'
+          flexDirection={props.variant === '04' ? 'column' : 'row'}
+        >
           {props.text || 'NavButton'}
-          <Rotate90 src={ArrowRight} alt='' />
+          <Rotate
+            deg='180'
+            src={props.variant === '04' ? ArrowUp : ArrowRight}
+            alt=''
+          />
         </FlexBox>
       </StyledNavButton>
     </>
