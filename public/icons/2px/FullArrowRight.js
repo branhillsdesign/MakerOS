@@ -13,7 +13,7 @@ const SvgFullArrowRight = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="m13 6.5 5.5 5.5m0 0L13 17.5m5.5-5.5H4"
-      stroke="#555770"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"

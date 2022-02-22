@@ -9,9 +9,6 @@ const NavList = ['Default', 'Default', 'Default', 'Default'];
 const Dropdown = styled.div`
   position: relative;
   display: inline-block;
-  Image:hover & {
-    transform: rotate(90deg);
-  }
 `;
 
 const DropdownContent = styled.div`
@@ -23,47 +20,26 @@ const DropdownContent = styled.div`
   z-index: 1;
   border-radius: 0.5rem;
   left: -4rem;
+  ${theme.elevation.shadow30};
   ${Dropdown}:hover & {
     display: block;
   }
 `;
 
-const Spacer = styled.span`
-  display: inline-block;
-  width: ${(props) => props.w || '.5rem'};
-`;
-
-const IconFrame = styled.div`
-  ${Dropdown}:hover & {
-    transform: rotate(90deg);
-    transition: 0.3s ease;
-  }
-`;
-
-const NavDropDown = (props) => {
+export const NavDropDown = () => {
   return (
     // I need to work on generating buttons dynamically from the NavList array
     <>
       <Dropdown>
-        <NavButton text='Weddings' variant='01'/>
+        <NavButton variant='01' hoverTarget={Dropdown} text='Events'/>
         <DropdownContent>
-          <DropdownLI />
+          <FlexBox flexDirection='column' gap='.25rem'>
+            <DropdownLI text='Weddings' />
+            <DropdownLI text='Weddings' />
+            <DropdownLI text='Weddings' />
+          </FlexBox>
         </DropdownContent>
       </Dropdown>
-    </>
-  );
-};
-
-export const NavDropdownMenu = () => {
-  return (
-    <>
-      <FlexBox
-        gap='3rem'
-        backgroundColor='${theme.colors.main}'
-        justifyContent='space-around'
-      >
-        <NavButton />
-      </FlexBox>
     </>
   );
 };

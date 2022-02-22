@@ -12,11 +12,11 @@ export const FlexBox = styled.div`
   flex-shrink: ${(props) => props.flexShrink || '1'};
   flex-basis: ${(props) => props.flexBasis || 'auto'};
 
-  &: > * {
+  > * & {
     margin-block: 0;
   }
 
-  &: > * + * {
+  > * + * & {
     margin-block-start: ${(props) => props.gap || 'null'};
   }
 `;

@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import { theme } from '../utils/ThemeConfig';
 import { FlexBox } from './layout/FlexBox';
-import Image from 'next/image';
-import ArrowRight from '../public/icons/2px/ArrowRight';
-import ArrowUp from '../public/icons/2px/ArrowUp';
+import { ArrowRight } from '../public/icons/2px/Index';
+import { ArrowUp } from '../public/icons/2px/Index';
+import { AniRotate } from '../utils/Animations';
 
 // Great styles dumbass, you have it working. Now use the fucking schema from Button.js so you can export all of these with props.
 
@@ -25,10 +25,10 @@ const styles = {
           transform: translateX(-1.5rem);
           border-radius: 0.25rem 0.25rem 0 0;
           margin-top: 1.25rem;
-        }
-        &:hover:after {
-          width: calc(100% + 3rem);
-        }`,
+          }
+          &:hover:after {
+            width: calc(100% + 3rem);
+          }`,
     '02': `padding: 0 1.5rem 1.5rem; 
           &:hover {
           background: ${theme.colors.background.surface100};
@@ -84,14 +84,6 @@ const StyledNavButton = styled.button`
   ${(props) => styles.variant[props.variant] || styles.variant['01']};
 `;
 
-const Rotate = styled(Image)`
-  transition: 0.3s ease;
-  button:hover & {
-    transform: ${(props) => styles.deg[props.deg] || styles.deg['90']};
-    transition: 0.3s ease;
-  }
-`;
-
 export const NavButton = (props) => {
   return (
     <>
@@ -103,11 +95,16 @@ export const NavButton = (props) => {
           flexDirection={props.variant === '04' ? 'column' : 'row'}
         >
           {props.text || 'NavButton'}
-          <Rotate
-            deg='180'
-            src={props.variant === '04' ? ArrowUp : ArrowRight}
-            alt=''
-          />
+          <AniRotate
+            hoverTarget={props.hoverTarget}
+            deg={props.variant === '04' ? '180deg' : '90deg'}
+          >
+            {props.variant === '04' ? (
+              <ArrowUp color={theme.colors.main} />
+            ) : (
+              <ArrowRight color={theme.colors.main} />
+            )}
+          </AniRotate>
         </FlexBox>
       </StyledNavButton>
     </>

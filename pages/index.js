@@ -2,14 +2,14 @@ import { Button } from '../components/Button';
 import { FlexBox } from '../components/layout/FlexBox';
 import { Spacer } from '../components/layout/Spacer';
 import { TextBox, InputLabel } from '../components/Input';
-import { DropdownLI } from '../components/DropdownLI';
+import { NavDropDown } from '../components/NavDropdownMenu';
 
 export default function Home() {
   return (
     <>
-      <DropdownLI />
+      <NavDropDown />
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
-        <FlexBox flexDirection='row' gap='10rem'>
+        <FlexBox flexDirection='row' gap='10rem' >
           <Button size='sm'>Button</Button>
           <Button>Button</Button>
           <Button size='lg'>Button</Button>
@@ -59,7 +59,7 @@ export default function Home() {
           <Spacer height='2rem' />
           <Button>Button</Button>
         </FlexBox>
-      </FlexBox> 
+      </FlexBox>
     </>
   );
 }

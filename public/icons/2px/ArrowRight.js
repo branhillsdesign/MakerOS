@@ -13,7 +13,7 @@ const SvgArrowRight = ({ title, titleId, ...props }) => (
     {title ? <title id={titleId}>{title}</title> : null}
     <path
       d="m7 21 9-9-9-9"
-      stroke="#555770"
+      stroke="currentColor"
       strokeWidth={2}
       strokeLinecap="round"
       strokeLinejoin="round"
