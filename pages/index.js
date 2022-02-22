@@ -7,9 +7,11 @@ import { NavDropDown } from '../components/NavDropdownMenu';
 export default function Home() {
   return (
     <>
-      <NavDropDown />
+      <FlexBox justifyContent='center'>
+        <NavDropDown />
+      </FlexBox>
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
-        <FlexBox flexDirection='row' gap='10rem' >
+        <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>
           <Button>Button</Button>
           <Button size='lg'>Button</Button>

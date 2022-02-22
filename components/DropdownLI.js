@@ -7,10 +7,10 @@ import { AniAppearRight } from '../utils/Animations';
 import { AniToColor } from '../utils/Animations';
 
 const ListItem = styled.li`
-  width: 16rem;
   cursor: pointer;
   display: flex;
   align-items: center;
+  min-width: 10rem;
   padding: 0.5rem;
   border-radius: 0.375rem;
   &:hover {
@@ -24,12 +24,16 @@ export const DropdownLI = (props) => {
       <ListItem>
         <FlexBox>
           <AniToColor hoverTarget={ListItem}>
-            <DiamondRing color={theme.colors.main} />
+            <DiamondRing color={theme.colors.main} width='1rem' height='1rem' />
           </AniToColor>
           {props.text || 'DropDownLI'}
         </FlexBox>
         <AniAppearRight hoverTarget={ListItem}>
-          <FullArrowRight color={theme.colors.main} />
+          <FullArrowRight
+            color={theme.colors.main}
+            width='1.2rem'
+            height='1.2rem'
+          />
         </AniAppearRight>
       </ListItem>
     </>
