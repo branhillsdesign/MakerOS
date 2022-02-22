@@ -6,7 +6,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
-   // "create-index": "create-index"
   },
   "dependencies": {
     "next": "12.1.0",
