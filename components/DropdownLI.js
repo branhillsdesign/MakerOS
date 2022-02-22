@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
-import FullArrowRight from '../public/img/FullArrowRight';
+import FullArrowRight from '../public/icons/2px/FullArrowRight';
 import { FlexBox } from '../components/layout/FlexBox';
-import DiamondRing from '../public/icons/Duotone/Love/DiamondRing';
+import DiamondRing from '../public/icons/Duotone/DiamondRing';
 import { theme } from '../utils/ThemeConfig';
 
 const ListItem = styled.li`
@@ -42,7 +42,7 @@ export const DropdownLI = () => {
     <>
       <ListItem>
         <FlexBox>
-          <AniDiamondRing />
+          <AniDiamondRing color={theme.colors.main}/>
           Events
         </FlexBox>
         <AniFullArrowRight />
