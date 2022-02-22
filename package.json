@@ -5,9 +5,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "svgr": "svgr --icon --title-prop --replace-attr-values '#3E7BFA=currentColor' --out-dir public/assets/icons public/icons",
-    "create-index": "create-index"
+    "lint": "next lint"
+   // "create-index": "create-index"
   },
   "dependencies": {
     "next": "12.1.0",
