@@ -25,10 +25,10 @@ export const DropdownLI = () => {
     <>
       <ListItem>
         <FlexBox>
-          <img src={ArrowRight} alt='' />
+          <ArrowRight style='path'/>
           Events
         </FlexBox>
-        <AnimateIcon src={ArrowRight} alt='' />
+        <ArrowRight stroke='pink'/>
       </ListItem>
     </>
   );
