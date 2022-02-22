@@ -1,0 +1,40 @@
+import * as React from "react";
+
+const SvgPinCrossed = ({ title, titleId, ...props }) => (
+  <svg
+    width="1em"
+    height="1em"
+    viewBox="0 0 24 24"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    aria-labelledby={titleId}
+    {...props}
+  >
+    {title ? <title id={titleId}>{title}</title> : null}
+    <mask
+      id="Pin_Crossed_svg__a"
+      style={{
+        maskType: "alpha",
+      }}
+      maskUnits="userSpaceOnUse"
+      x={0}
+      y={0}
+      width={24}
+      height={24}
+    >
+      <path
+        d="M19.784 19.78 4 3.998H0V24h24V0H5.698v2.866l15.5 15.5-1.414 1.415Z"
+        fill="#fff"
+      />
+    </mask>
+    <g mask="url(#Pin_Crossed_svg__a)">
+      <path d="m3.524 4.942 15.5 15.5" stroke="#555770" strokeWidth={2} />
+      <path
+        d="m12.697 20.261.735.678-.735-.678Zm-1.394 0-.735.678.735-.678ZM18 10c0 .56-.212 1.313-.64 2.218-.42.888-1.008 1.843-1.667 2.785-1.318 1.883-2.86 3.633-3.732 4.58l1.471 1.356c.898-.976 2.508-2.8 3.9-4.79.695-.994 1.35-2.05 1.836-3.076.477-1.01.832-2.078.832-3.073h-2Zm-5.961 9.584c-.873-.948-2.414-2.698-3.732-4.581-.659-.942-1.247-1.897-1.667-2.785C6.212 11.313 6 10.561 6 10H4c0 .995.355 2.063.832 3.073.485 1.026 1.14 2.082 1.836 3.076 1.392 1.99 3.002 3.814 3.9 4.79l1.471-1.355ZM6 10a6 6 0 0 1 6-6V2a8 8 0 0 0-8 8h2Zm6-6a6 6 0 0 1 6 6h2a8 8 0 0 0-8-8v2Zm-.039 15.584.004-.003a.063.063 0 0 1 .07 0l.004.003-1.471 1.355a1.94 1.94 0 0 0 2.864 0l-1.471-1.355ZM14 10a2 2 0 0 1-2 2v2a4 4 0 0 0 4-4h-2Zm-2 2a2 2 0 0 1-2-2H8a4 4 0 0 0 4 4v-2Zm-2-2a2 2 0 0 1 2-2V6a4 4 0 0 0-4 4h2Zm2-2a2 2 0 0 1 2 2h2a4 4 0 0 0-4-4v2Z"
+        fill="#555770"
+      />
+    </g>
+  </svg>
+);
+
+export default SvgPinCrossed;

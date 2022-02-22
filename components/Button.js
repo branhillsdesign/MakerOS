@@ -31,6 +31,7 @@ const styles = {
 };
 
 export const Button = styled.button`
+  cursor: pointer;
   width: 100%;
   border: none;
   transition: 0.3s all ease-out;

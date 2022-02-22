@@ -1,6 +1,7 @@
-import styled from 'styled-components';
-import ArrowRight from '../public/icons/2px/Arrows/Full Arrow Right.svg';
-import { FlexBox } from './layout/FlexBox';
+import styled, { keyframes } from 'styled-components';
+import FullArrowRight from '../public/img/FullArrowRight';
+import { FlexBox } from '../components/layout/FlexBox';
+import DiamondRing from '../public/icons/Duotone/Love/Diamond Ring.svg';
 import { theme } from '../utils/ThemeConfig';
 
 const ListItem = styled.li`
@@ -11,12 +12,28 @@ const ListItem = styled.li`
   padding: 0.5rem;
   border-radius: 0.375rem;
   &:hover {
-    background-color: ${theme.colors.background.surface100};
+    background-color: ${theme.colors.background.bg00};
   }
 `;
 
-const AnimateIcon = styled.img`
-  li:hover & {
+const AniFullArrowRight = styled(FullArrowRight)`
+  path:nth-child(1) {
+    stroke: ${theme.colors.main};
+  }
+  transform: translateX(-1rem) scale(0.5);
+  transition: all 0.2s ease-in;
+  opacity: 0;
+  ${ListItem}:hover & {
+    transform: translateX(0) scale(1);
+    opacity: 1;
+    transition: all 0.2s ease-in;
+  }
+`;
+
+const AniDiamondRing = styled(DiamondRing)`
+  filter: grayscale(100%);
+  ${ListItem}:hover & {
+    filter: grayscale(0);
   }
 `;
 
@@ -25,10 +42,10 @@ export const DropdownLI = () => {
     <>
       <ListItem>
         <FlexBox>
-          <ArrowRight style='path'/>
+          <AniDiamondRing />
           Events
         </FlexBox>
-        <ArrowRight stroke='pink'/>
+        <AniFullArrowRight />
       </ListItem>
     </>
   );

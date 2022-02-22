@@ -1,0 +1,25 @@
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<mask id="mask0_402_13913" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="3" y="7" width="14" height="14">
+<path d="M3 21V7H5V19H17V21H3Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_402_13913)">
+<rect x="3.6" y="7.6" width="12.8" height="12.8" rx="1.4" stroke="#555770" stroke-width="1.2"/>
+</g>
+<mask id="mask1_402_13913" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="7" y="3" width="14" height="14">
+<path d="M7 3H9V5H7V3Z" fill="white"/>
+<path d="M11 3H13V5H11V3Z" fill="white"/>
+<path d="M7 15H9V17H7V15Z" fill="white"/>
+<path d="M7 11H9V13H7V11Z" fill="white"/>
+<path d="M7 7H9V9H7V7Z" fill="white"/>
+<path d="M11 15H13V17H11V15Z" fill="white"/>
+<path d="M15 15H17V17H15V15Z" fill="white"/>
+<path d="M19 3H21V5H19V3Z" fill="white"/>
+<path d="M15 3H17V5H15V3Z" fill="white"/>
+<path d="M19 15H21V17H19V15Z" fill="white"/>
+<path d="M19 11H21V13H19V11Z" fill="white"/>
+<path d="M19 7H21V9H19V7Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_402_13913)">
+<rect x="7.6" y="3.6" width="12.8" height="12.8" rx="1.4" stroke="#555770" stroke-width="1.2"/>
+</g>
+</svg>
