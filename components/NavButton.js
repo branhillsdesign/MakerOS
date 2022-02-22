@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { theme } from '../utils/ThemeConfig';
 import { FlexBox } from './layout/FlexBox';
 import Image from 'next/image';
-import ArrowRight from '../public/icons/2px/Arrows/Arrow Right.svg';
-import ArrowUp from '../public/icons/2px/Arrows/Arrow Up.svg';
+import ArrowRight from '../public/icons/2px/Arrows/ArrowRight';
+import ArrowUp from '../public/icons/2px/Arrows/ArrowUp';
 
 // Great styles dumbass, you have it working. Now use the fucking schema from Button.js so you can export all of these with props.
 

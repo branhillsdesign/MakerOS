@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components';
 import FullArrowRight from '../public/img/FullArrowRight';
 import { FlexBox } from '../components/layout/FlexBox';
-import DiamondRing from '../public/icons/Duotone/Love/Diamond Ring.svg';
+import DiamondRing from '../public/icons/Duotone/Love/DiamondRing';
 import { theme } from '../utils/ThemeConfig';
 
 const ListItem = styled.li`
