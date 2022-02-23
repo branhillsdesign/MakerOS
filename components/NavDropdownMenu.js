@@ -4,7 +4,20 @@ import { FlexBox } from './layout/FlexBox';
 import { DropdownLI } from './DropdownLI';
 import { NavButton } from './NavButton';
 
-const NavList = ['Default', 'Default', 'Default', 'Default'];
+const navText = {
+  nav01: {
+    one: 'Weddings',
+    two: 'Parties',
+    three: 'Tournaments',
+    four: 'Upcoming Events',
+    five: 'Placeholder',
+  },
+  nav02: {
+    '01': 'Scramble',
+    '02': 'Couples',
+    '03': 'Singles',
+  },
+};
 
 const Dropdown = styled.div`
   display: block;
@@ -29,18 +42,16 @@ const DropdownContent = styled.div`
 
 export const NavDropDown = () => {
   return (
-    // I need to work on generating buttons dynamically from the NavList array
+    // I need to work on generating buttons dynamically from the NavList object.
     <>
       <Dropdown>
         <NavButton variant='01' hoverTarget={Dropdown} text='Events' />
         <DropdownContent>
           <FlexBox flexDirection='column' gap='.25rem'>
-            <DropdownLI text='Weddings' />
-            <DropdownLI text='Weddings' />
-            <DropdownLI text='Weddings' />
-            <DropdownLI text='Weddings' />
-            <DropdownLI text='Weddings' />
-            <DropdownLI text='Weddings' />
+            <DropdownLI text={navText.nav01.one} />
+            <DropdownLI text={navText.nav01.two} />
+            <DropdownLI text={navText.nav01.three} />
+            <DropdownLI text={navText.nav01.four} />
           </FlexBox>
         </DropdownContent>
       </Dropdown>

@@ -10,7 +10,8 @@ const ListItem = styled.li`
   cursor: pointer;
   display: flex;
   align-items: center;
-  min-width: 10rem;
+  justify-content: space-between;
+  min-width: 16rem;
   padding: 0.5rem;
   border-radius: 0.375rem;
   &:hover {
@@ -25,7 +26,7 @@ export const DropdownLI = (props) => {
   return (
     <>
       <ListItem>
-        <FlexBox>
+        <FlexBox gap='1rem' alignItems='center'>
           <AniToColor hoverTarget={ListItem}>
             <DiamondRing color={theme.colors.main} width='1rem' height='1rem' />
           </AniToColor>

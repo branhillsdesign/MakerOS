@@ -3,9 +3,9 @@ import { theme } from '../utils/ThemeConfig';
 
 const styles = {
   size: {
-    sm: 'padding: 0.25rem 1.25rem; font-size: 0.75rem;',
-    md: 'padding: 0.5rem 1.5rem; font-size: 0.875rem;',
-    lg: 'padding: 1rem 2rem; font-size: 1rem;',
+    sm: 'padding: 0.25rem 0.75rem; font-size: ${theme.label.sm};',
+    md: 'padding: 0.5rem 1rem; font-size: ${theme.label.md};',
+    lg: 'padding: 0.75rem 1.5rem; font-size: ${theme.label.lg};',
   },
   variant: {
     outline: `background: ${theme.colors.white100}; outline: 2px solid ${theme.colors.main}; outline-offset: -2px; color: ${theme.colors.main};`,

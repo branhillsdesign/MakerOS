@@ -25,10 +25,13 @@ const styles = {
           transform: translateX(-1.5rem);
           border-radius: 0.25rem 0.25rem 0 0;
           margin-top: 1.25rem;
-          }
-          &:hover:after {
-            width: calc(100% + 3rem);
-          }`,
+          };
+          &:hover {
+            &:after {
+              width: calc(100% + 3rem);
+            };
+          };
+          `,
     '02': `padding: 0 1.5rem 1.5rem; 
           &:hover {
           background: ${theme.colors.background.surface100};
@@ -71,10 +74,12 @@ const styles = {
         }`,
     '04': `padding: 1.5rem 1.5rem 0;
           text-align: center;`,
+    '05': `padding: 1.5rem 1.5rem 0;
+          text-align: center;`,
   },
 };
 
-const StyledNavButton = styled.button`
+const StyledNavButton = styled.div`
   cursor: pointer;
   border: none;
   background: inherit;
@@ -82,10 +87,6 @@ const StyledNavButton = styled.button`
   text-align: center;
   transition: all 0.3s ease;
   ${(props) => styles.variant[props.variant] || styles.variant['01']};
-  &:focus {
-    outline: 2px solid ${theme.colors.main};
-    border-radius: 0.375rem;
-  }
 `;
 
 export const NavButton = (props) => {
