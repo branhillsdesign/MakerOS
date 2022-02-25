@@ -26,11 +26,7 @@ const styles = {
           border-radius: 0.25rem 0.25rem 0 0;
           margin-top: 1.25rem;
           };
-          &:hover {
-            &:after {
-              width: calc(100% + 3rem);
-            };
-          };
+          
           `,
     '02': `padding: 0 1.5rem 1.5rem; 
           &:hover {
@@ -49,9 +45,7 @@ const styles = {
           border-radius: 0.25rem 0.25rem 0 0;
           margin-bottom: 1.25rem;
         }
-        &:hover:before {
-        width: calc(100% + 3rem);
-        }`,
+        `,
     '03': `padding: 1.5rem 1.5rem 0;
           &:hover {
           background: ${theme.colors.background.surface100};
@@ -87,12 +81,22 @@ const StyledNavButton = styled.div`
   text-align: center;
   transition: all 0.3s ease;
   ${(props) => styles.variant[props.variant] || styles.variant['01']};
+  ${(props) => props.hoverTarget}:hover & {
+    &:after {
+      width: calc(100% + 3rem);
+    }
+  }
+  ${(props) => props.hoverTarget}:hover & {
+    &:before {
+      width: calc(100% + 3rem);
+    }
+  }
 `;
 
 export const NavButton = (props) => {
   return (
     <>
-      <StyledNavButton variant={props.variant}>
+      <StyledNavButton variant={props.variant} hoverTarget={props.hoverTarget}>
         <FlexBox
           justifyContent='center'
           alignItems='center'

@@ -2,14 +2,16 @@ import { Button } from '../components/Button';
 import { FlexBox } from '../components/layout/FlexBox';
 import { Spacer } from '../components/layout/Spacer';
 import { TextBox, InputLabel } from '../components/Input';
-import { NavDropDown } from '../components/NavDropdownMenu';
+import { NavBar } from '../components/NavBar';
 
 export default function Home() {
+  const data = [{ name: 'test1' }, { name: 'test2' }];
+  const listItems = data.map((d) => <li key={d.name}>{d.name}</li>);
+
   return (
     <>
-      <FlexBox justifyContent='center' gap='0'>
-        <NavDropDown />
-      </FlexBox>
+      <NavBar />
+      {listItems}
       <FlexBox flexDirection='column' gap='2rem' alignItems='center'>
         <FlexBox flexDirection='row' gap='10rem'>
           <Button size='sm'>Button</Button>

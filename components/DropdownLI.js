@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import FullArrowRight from '../public/icons/2px/FullArrowRight';
 import { FlexBox } from '../components/layout/FlexBox';
-import DiamondRing from '../public/icons/Duotone/DiamondRing';
 import { theme } from '../utils/ThemeConfig';
 import { AniAppearRight } from '../utils/Animations';
 import { AniToColor } from '../utils/Animations';
@@ -27,9 +26,7 @@ export const DropdownLI = (props) => {
     <>
       <ListItem>
         <FlexBox gap='1rem' alignItems='center'>
-          <AniToColor hoverTarget={ListItem}>
-            <DiamondRing color={theme.colors.main} width='1rem' height='1rem' />
-          </AniToColor>
+          <AniToColor hoverTarget={ListItem}>{props.icon || 'n/a'}</AniToColor>
           {props.text || 'DropDownLI'}
         </FlexBox>
         <AniAppearRight hoverTarget={ListItem}>

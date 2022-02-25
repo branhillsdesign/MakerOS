@@ -1,8 +1,9 @@
 import styled from 'styled-components';
-import { theme } from '../utils/ThemeConfig';
-import { FlexBox } from './layout/FlexBox';
-import { DropdownLI } from './DropdownLI';
-import { NavButton } from './NavButton';
+import { theme } from '../../utils/ThemeConfig';
+import { FlexBox } from '../layout/FlexBox';
+import { DropdownLI } from '../DropdownLI';
+import { NavButton } from '../NavButton';
+import React, { useState } from 'react';
 
 const navText = {
   nav01: {
@@ -25,7 +26,7 @@ const Dropdown = styled.div`
 `;
 
 const DropdownContent = styled.div`
-  display: none;
+  display: block;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -34,27 +35,22 @@ const DropdownContent = styled.div`
   z-index: 1;
   border-radius: 0.5rem;
   ${theme.elevation.shadow60};
-  ${Dropdown}:hover & {
-    display: block;
-    transition: all 0.3s ease-in;
-  }
 `;
 
 export const NavDropDown = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const handleHover = () => setIsOpen(!isOpen);
+
   return (
     // I need to work on generating buttons dynamically from the NavList object.
     <>
-      <Dropdown>
-        <NavButton variant='01' hoverTarget={Dropdown} text='Events' />
-        <DropdownContent>
-          <FlexBox flexDirection='column' gap='.25rem'>
-            <DropdownLI text={navText.nav01.one} />
-            <DropdownLI text={navText.nav01.two} />
-            <DropdownLI text={navText.nav01.three} />
-            <DropdownLI text={navText.nav01.four} />
-          </FlexBox>
-        </DropdownContent>
-      </Dropdown>
+      <NavButton
+        variant='01'
+        onMouseEnter={handleHover}
+        onMouseLeave={handleHover}
+        text='Events'
+      />
+      {isOpen && <div>HI!</div>}
     </>
   );
 };

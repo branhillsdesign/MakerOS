@@ -10,6 +10,8 @@ export const FlexBox = styled.div`
   flex-grow: ${(props) => props.flexGrow || 'auto'};
   flex-shrink: ${(props) => props.flexShrink || 'auto'};
   flex-basis: ${(props) => props.flexBasis || 'auto'};
+  min-width: ${(props) => props.minWidth || 'auto'};
+  background-color: ${(props) => props.bg || 'null'};
 
   > * & {
     margin-block: 0;
