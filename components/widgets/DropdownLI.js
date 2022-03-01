@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import FullArrowRight from '../public/icons/2px/FullArrowRight';
-import { FlexBox } from '../components/layout/FlexBox';
-import { theme } from '../utils/ThemeConfig';
-import { AniAppearRight } from '../utils/Animations';
-import { AniToColor } from '../utils/Animations';
+import FullArrowRight from '../../public/icons/2px/FullArrowRight';
+import { FlexBox } from '../util/FlexBox';
+import { theme } from '../../utils/ThemeConfig';
+import { AniAppearRight } from '../../utils/Animations';
+import { AniToColor } from '../../utils/Animations';
 
 const ListItem = styled.li`
   cursor: pointer;

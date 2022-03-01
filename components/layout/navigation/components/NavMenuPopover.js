@@ -1,10 +1,10 @@
 import styled from 'styled-components';
 import { useState } from 'react';
-import { theme } from '../utils/ThemeConfig';
+import { theme } from '../../../../utils/ThemeConfig';
 import { NavButton } from './NavButton';
-import { Button } from './Button';
-import { FlexBox } from './layout/FlexBox';
-import { Spacer } from './layout/Spacer';
+import { Button } from '../../../widgets/Button';
+import { FlexBox } from '../../../util/FlexBox';
+import { Spacer } from '../../../util/Spacer';
 
 const Dropdown = styled.div`
   position: relative;

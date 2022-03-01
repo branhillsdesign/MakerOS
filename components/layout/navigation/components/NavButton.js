@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { theme } from '../utils/ThemeConfig';
-import { FlexBox } from './layout/FlexBox';
-import { ArrowRight } from '../public/icons/2px/Index';
-import { ArrowUp } from '../public/icons/2px/Index';
-import { AniRotate } from '../utils/Animations';
+import { theme } from '../../../../utils/ThemeConfig';
+import { FlexBox } from '../../../util/FlexBox';
+import { ArrowRight } from '../../../../public/icons/2px/Index';
+import { ArrowUp } from '../../../../public/icons/2px/Index';
+import { AniRotate } from '../../../../utils/Animations';
 
 // Great styles dumbass, you have it working. Now use the fucking schema from Button.js so you can export all of these with props.
 
@@ -25,8 +25,7 @@ const styles = {
           transform: translateX(-1.5rem);
           border-radius: 0.25rem 0.25rem 0 0;
           margin-top: 1.25rem;
-          };
-          
+          };          
           `,
     '02': `padding: 0 1.5rem 1.5rem; 
           &:hover {

@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { theme } from '../utils/ThemeConfig';
-import { ResetInput } from '../utils/FormReset';
+import { theme } from '../../utils/ThemeConfig';
+import { ResetInput } from '../../utils/FormReset';
 
 const styles = {
   type: {

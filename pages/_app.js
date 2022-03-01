@@ -1,8 +1,8 @@
-import { createGlobalStyle, ThemeProvider } from 'styled-components';
+import { createGlobalStyle, keyframes, ThemeProvider } from 'styled-components';
 import { theme } from '../utils/ThemeConfig';
-import Head from 'next/head';
 
 const GlobalStyle = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap');
 *, *::before, *::after {
     box-sizing: border-box;
   }
@@ -33,23 +33,24 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
+// Insert breakpoints here
+const queries = {
+	xs: '(max-width: 575.98px)',
+	sm: '(max-width: 767.98px)',
+	md: '(max-width: 991.98px)',
+	lg: '(max-width: 1199.98px)',
+	xl: '(max-width: 1919.98px)',
+};
+
 function MyApp({ Component, pageProps }) {
-  return (
-    <>
-      <Head>
-        <link rel='preconnect' href='https://fonts.googleapis.com' />
-        <link rel='preconnect' href='https://fonts.gstatic.com' crossOrigin />
-        <link
-          href='https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&display=swap'
-          rel='stylesheet'
-        />
-      </Head>
-      <GlobalStyle />
-      <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </>
-  );
+	return (
+		<>
+			<GlobalStyle />
+			<ThemeProvider theme={theme}>
+					<Component {...pageProps} />
+			</ThemeProvider>
+		</>
+	);
 }
 
 export default MyApp;
