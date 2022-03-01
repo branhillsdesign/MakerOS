@@ -2,7 +2,7 @@ import { Button } from '../components/widgets/Button';
 import { FlexBox } from '../components/util/FlexBox';
 import { Spacer } from '../components/util/Spacer';
 import { TextBox, InputLabel } from '../components/widgets/Input';
-import { NavBar } from '../components/layout/navigation/components/NavBar';
+import { NavBar } from '../components/layout/Navigation/components/NavBar';
 export default function Home() {
 	return (
     <>
