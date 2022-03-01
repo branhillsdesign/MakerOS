@@ -1,4 +1,3 @@
-import styled from 'styled-components';
 import { theme } from '../../../../utils/ThemeConfig';
 import { FlexBox } from '../../../util/FlexBox';
 import { NavMenuPopover } from './NavMenuPopover';
