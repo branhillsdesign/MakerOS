@@ -54,7 +54,7 @@ const navBtn01DropdownListData = {
 	],
 };
 
-export const navBtn01ListItems = () => {
+const navBtn01ListItems = () => {
 	const data = navBtn01DropdownListData.navDropdownList;
 	const navList = data.map((item) => (
 		<Fragment key={item.id}>
@@ -100,7 +100,7 @@ const navBtn02DropdownListData = {
 	],
 };
 
-export const navBtn02ListItems = () => {
+const navBtn02ListItems = () => {
 	const data = navBtn02DropdownListData.navDropdownList;
 	const navList = data.map((item) => (
 		<Fragment key={item.id}>
@@ -134,7 +134,7 @@ const navBtn03DropdownListData = {
 	],
 };
 
-export const navBtn03ListItems = () => {
+const navBtn03ListItems = () => {
 	const data = navBtn03DropdownListData.navDropdownList;
 	const navList = data.map((item) => (
 		<Fragment key={item.id}>
@@ -203,3 +203,17 @@ export const navBtn03ListItems = () => {
 // 	));
 // 	return navList;
 // };
+
+// Change main navigation button text here.
+export const navMenuBtnList = {
+	btnText: {
+		btn01: 'Events',
+		btn02: 'Leagues',
+		btn03: 'Course Info',
+	},
+	btnList: {
+		btn01: navBtn01ListItems(),
+		btn02: navBtn02ListItems(),
+		btn03: navBtn03ListItems(),
+	},
+};

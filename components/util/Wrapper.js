@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const BigCenter = styled.div`
+export const Wrapper = styled.div`
 	max-width: 1440px;
 	margin-left: auto;
 	margin-right: auto;

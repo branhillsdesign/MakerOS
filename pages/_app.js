@@ -31,6 +31,10 @@ const GlobalStyle = createGlobalStyle`
   #root, #__next {
     isolation: isolate;
   }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
 `;
 
 // Insert breakpoints here
@@ -47,7 +51,7 @@ function MyApp({ Component, pageProps }) {
 		<>
 			<GlobalStyle />
 			<ThemeProvider theme={theme}>
-					<Component {...pageProps} />
+				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
 	);

@@ -5,10 +5,11 @@ import Instagram from '../../../../public/assets/Social/instagram.svg';
 import LinkedIn from '../../../../public/assets/Social/linkedin.svg';
 import TikTok from '../../../../public/assets/Social/tiktok.svg';
 import Meta from '../../../../public/assets/Social/meta.svg';
+import Link from 'next/link';
+import { AniToColor } from '../../../../utils/Animations';
 
 const NavRiderBox = styled.div`
-	max-width: 1440px;
-	padding: 0.5rem 0;
+	padding: 0.5rem 2rem;
 	display: flex;
 	flex-shrink: 0;
 	justify-content: flex-end;

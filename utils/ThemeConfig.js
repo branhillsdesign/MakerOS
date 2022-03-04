@@ -13,9 +13,9 @@ const theme = {
 		p2: 'font-weight: 500; font-size: 1rem;',
 	},
 	label: {
-		small: '0.875rem',
-		medium: '1rem',
-		large: '1.125rem',
+		small: 'clamp(0.75rem, 1.2vw, 0.875rem);',
+		medium: 'clamp(0.875rem, 1.2vw, 1rem);',
+		large: 'clamp(1rem, 1.2vw, 1.125rem);',
 	},
 	display: {
 		display1: 'font-weight: 700; font-size: 4rem;',
@@ -137,12 +137,12 @@ const theme = {
 	},
 	// Breakpoints
 	screen: {
-		xs: '@media (max-width: 575.98px)',
-		sm: '@media (min-width: 576px) and (max-width: 767.98px)',
-		md: '@media (min-width: 768px) and (max-width: 991.98px)',
-		lg: '@media (min-width: 992px) and (max-width: 1199.98px)',
-		xl: '@media (min-width: 1200px) and (max-width: 1919.98px)',
-		ultra: '@media (min-width: 1920px)',
+		xs: '575.98px',
+		sm: '767.98px',
+		md: '991.98px',
+		lg: '1199.98px',
+		xl: '1919.98px',
+		ultra: '1920px',
 	},
 };
 

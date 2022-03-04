@@ -15,6 +15,8 @@ export const FlexBox = styled.div`
 	background-color: ${(props) => props.bg || 'null'};
 	padding: ${(props) => props.padding || 'null'};
 	max-width: ${(props) => props.maxWidth || 'null'};
+	flex-wrap: ${(props) => props.flexWrap || 'null'};
+	box-sizing: ${(props) => props.boxSizing || 'inherit'};
 
 	> * & {
 		margin-block: 0;

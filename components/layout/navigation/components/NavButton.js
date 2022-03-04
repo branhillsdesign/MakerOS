@@ -9,12 +9,12 @@ import { AniRotate } from '../../../../utils/Animations';
 // Great styles dumbass, you have it working. Now use the fucking schema from Button.js so you can export all of these with props.
 
 const styles = {
-  deg: {
-    90: 'rotate(90deg);',
-    180: 'rotate(180deg);',
-  },
-  variant: {
-    '01': `padding: 1.5rem 1.5rem 0;
+	deg: {
+		90: 'rotate(90deg);',
+		180: 'rotate(180deg);',
+	},
+	variant: {
+		'01': `padding: 1.5rem 1.5rem 0;
           &:after {
           content: '';
           display: block;
@@ -27,7 +27,7 @@ const styles = {
           margin-top: 1.25rem;
           };          
           `,
-    '02': `padding: 0 1.5rem 1.5rem; 
+		'02': `padding: 0 1.5rem 1.5rem; 
           &:hover {
           background: ${theme.colors.background.surface100};
           transition: background 0.3s ease 0s;
@@ -45,7 +45,7 @@ const styles = {
           margin-bottom: 1.25rem;
         }
         `,
-    '03': `padding: 1.5rem 1.5rem 0;
+		'03': `padding: 1.5rem 1.5rem 0;
           &:hover {
           background: ${theme.colors.background.surface100};
           transition: background 0.3s ease 0s;
@@ -65,56 +65,55 @@ const styles = {
         &:hover:after {
           width: calc(100% + 3rem);
         }`,
-    '04': `padding: 1.5rem 1.5rem 0;
+		'04': `padding: 1.5rem 1.5rem 0;
           text-align: center;`,
-    '05': `padding: 1.5rem 1.5rem 0;
+		'05': `padding: 1.5rem 1.5rem 0;
           text-align: center;`,
-  },
+    mobile: `padding: 1.5rem 2.75rem 1.5rem;`,
+	},
 };
 
 const StyledNavButton = styled.div`
-  cursor: pointer;
-  border: none;
-  background: inherit;
-  font-size: ${theme.label.large};
-  text-align: center;
-  transition: all 0.3s ease;
-  ${(props) => styles.variant[props.variant] || styles.variant['01']};
-  ${(props) => props.hoverTarget}:hover & {
-    &:after {
-      width: calc(100% + 3rem);
-    }
-  }
-  ${(props) => props.hoverTarget}:hover & {
-    &:before {
-      width: calc(100% + 3rem);
-    }
-  }
+	cursor: pointer;
+	border: none;
+	white-space: nowrap;
+	background: inherit;
+	font-size: ${theme.label.large};
+	transition: all 0.3s ease;
+	width: 100%;
+	${(props) => styles.variant[props.variant] || styles.variant['01']};
+	${(props) => props.hoverTarget}:hover & {
+		&:after {
+			width: calc(100% + 3rem);
+		}
+	}
+	${(props) => props.hoverTarget}:hover & {
+		&:before {
+			width: calc(100% + 3rem);
+		}
+	}
 `;
 
 export const NavButton = (props) => {
-  return (
-    <>
-      <StyledNavButton variant={props.variant} hoverTarget={props.hoverTarget}>
-        <FlexBox
-          justifyContent='center'
-          alignItems='center'
-          gap='0.5rem'
-          flexDirection={props.variant === '04' ? 'column' : 'row'}
-        >
-          {props.text || 'NavButton'}
-          <AniRotate
-            hoverTarget={props.hoverTarget}
-            deg={props.variant === '04' ? '180deg' : '90deg'}
-          >
-            {props.variant === '04' ? (
-              <ArrowUp color={theme.colors.main} />
-            ) : (
-              <ArrowRight color={theme.colors.main} />
-            )}
-          </AniRotate>
-        </FlexBox>
-      </StyledNavButton>
-    </>
-  );
+	return (
+		<>
+			<StyledNavButton variant={props.variant} hoverTarget={props.hoverTarget}>
+				<FlexBox
+					alignItems='center'
+					gap='0.5rem'
+					flexDirection={props.variant === '04' ? 'column' : 'row'}>
+					{props.text || 'NavButton'}
+					<AniRotate
+						hoverTarget={props.hoverTarget}
+						deg={props.variant === '04' ? '180deg' : '90deg'}>
+						{props.variant === '04' ? (
+							<ArrowUp color={theme.colors.main} />
+						) : (
+							<ArrowRight color={theme.colors.main} />
+						)}
+					</AniRotate>
+				</FlexBox>
+			</StyledNavButton>
+		</>
+	);
 };

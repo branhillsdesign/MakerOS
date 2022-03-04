@@ -8,10 +8,10 @@ const styles = {
 		lg: 'padding: 0.75rem 1.5rem; font-size: ${theme.label.lg};',
 	},
 	variant: {
-		outline: `background: inherit; outline: 2px solid ${theme.colors.main}; outline-offset: -2px; color: ${theme.colors.main};`,
+		outline: `background: inherit; border: 2px solid ${theme.colors.main}; color: ${theme.colors.main};`,
 		pill: `background: ${theme.colors.white100}; outline: none; color: ${theme.colors.main}; border-radius: 8rem; box-shadow: ${theme.elevation.shadow60};`,
 		plain: `background: ${theme.colors.main}; outline: none; color: ${theme.colors.white100};`,
-		disabled: `background: ${theme.colors.background.bg10}; outline: 2px solid ${theme.colors.text.disabled}; color: ${theme.colors.text.disabled};`,
+		disabled: `background: ${theme.colors.background.bg10}; border: 2px solid ${theme.colors.text.disabled}; color: ${theme.colors.text.disabled};`,
 		link: `background: none; outline: none; color: ${theme.colors.main};`,
 	},
 	hover: {
@@ -32,10 +32,12 @@ const styles = {
 
 export const Button = styled.button`
 	cursor: pointer;
+	height: fit-content;
 	width: ${(props) => props.width || '100%'};
 	border: none;
 	transition: 0.3s all ease-out;
-	border-radius: 8px;
+	border-radius: 0.5rem;
+	white-space: nowrap;
 	${(props) => styles.size[props.size] || styles.size['md']}
 	${(props) => styles.variant[props.variant] || styles.variant['plain']};
 
