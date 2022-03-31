@@ -8,6 +8,7 @@ import { MobileNavBar } from '../components/layout/navigation/components/MobileN
 import { Wrapper } from '../components/util/Wrapper';
 import { NavBanner } from '../components/layout/navigation/components/NavBanner';
 import { NavRider } from '../components/layout/navigation/components/NavRider';
+import { Card01 } from '../components/layout/cards/Cards';
 export default function Home() {
 	return (
     <>
@@ -16,7 +17,8 @@ export default function Home() {
 				<MobileNavBar />
 			</Box>
 			<NavBanner />
-			<Spacer height='2rem' />
+      <Spacer height='2rem' />
+      <Card01 />
 			<Wrapper>
 				<Spacer height='4rem' />
 				<FlexBox flexDirection='column' gap='2rem' alignItems='center'>
